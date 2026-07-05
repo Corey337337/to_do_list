@@ -7,15 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="400">
     <Canvas>
-        <TreeView x:Name="Collection" Width="77" Height="173" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <TreeViewItem Header="Элемент 1">
-                <TreeViewItem Header="Подэлемент 1.1"/>
-                <TreeViewItem Header="Подэлемент 1.2"/>
-                <TreeViewItem Header="Подэлемент 1.3"/>
-            </TreeViewItem>
-        </TreeView>
+        <ListView x:Name="MusicListView" Height="399" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Title}" FontSize="50" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding Artist}" FontSize="30" />
+                        <TextBlock Text="{Binding Album}" FontSize="30"/>
+                        <TextBlock Text="{Binding Year}" FontSize="30"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
 
-        <CheckBox Height="68" Width="181" Canvas.Left="121" Canvas.Top="30"/>
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+        </ListView>
+
+        <Button x:Name="Add" Content="Add Music" Canvas.Left="121" Canvas.Top="470"  Width="150" Height="30" Click="Add_Click" HorizontalAlignment="Left" VerticalAlignment="Top" />
+
 
     </Canvas>
 </Window>
