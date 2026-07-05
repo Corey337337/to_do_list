@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="400">
     <Canvas>
-        <ListView x:Name="MusicListView" Height="399" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" >
+        <ListView x:Name="MusicListView" Height="292" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -15,6 +15,7 @@
                         <TextBlock Text="{Binding Artist}" FontSize="30" />
                         <TextBlock Text="{Binding Album}" FontSize="30"/>
                         <TextBlock Text="{Binding Year}" FontSize="30"/>
+                        <TextBlock Text="{Binding MyRating}" FontSize="30"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -26,7 +27,7 @@
             </ListView.ItemsPanel>
         </ListView>
 
-        <Button x:Name="Add" Content="Add Music" Canvas.Left="121" Canvas.Top="470"  Width="150" Height="30" Click="Add_Click" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Button x:Name="Add" Content="Add Music" Canvas.Left="27" Canvas.Top="410"  Width="150" Height="55" Click="Add_Click" HorizontalAlignment="Left" VerticalAlignment="Top" />
 
 
     </Canvas>

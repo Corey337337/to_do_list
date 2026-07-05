@@ -18,13 +18,15 @@ namespace music_list
         public string Artist { get; set; }
         public string Album { get; set; }
         public int Year { get; set; }
+        public int MyRating { get; set; }
 
-        public Music(string title, string artist, string album, int year)
+        public Music(string title, string artist, string album, int year, int myRating)
         {
             Title = title;
             Artist = artist;
             Album = album;
             Year = year;
+            MyRating = myRating;
         }
 
     }
@@ -38,9 +40,9 @@ namespace music_list
 
             allMusic = new ObservableCollection<Music>
             {
-                new Music("No Surprises", "Radiohead", "OK Computer", 1997),
-                new Music("Song 2", "Artist 2", "Album 2", 2021),
-                new Music("Song 3", "Artist 3", "Album 3", 2022),
+                new Music("No Surprises", "Radiohead", "OK Computer", 1997, 10),
+                new Music("Song 2", "Artist 2", "Album 2", 2021, 0),
+                new Music("Song 3", "Artist 3", "Album 3", 2022, 0),
             };
 
             MusicListView.ItemsSource = allMusic;
