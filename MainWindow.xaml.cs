@@ -59,7 +59,15 @@ namespace music_list
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-
+            if(MusicListView.SelectedItem != null)
+            {
+                var selectedMusic = MusicListView.SelectedItem as Music;
+                allMusic.Remove(selectedMusic);
+            }
+            else
+            {
+                MessageBox.Show("Please select a music to delete.");
+            }
         }
     }
 }
