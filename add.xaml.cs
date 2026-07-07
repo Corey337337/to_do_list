@@ -29,12 +29,31 @@ namespace music_list
 
         private void Add_Music_Click(object sender, RoutedEventArgs e)
         {
-            int year = Convert.ToInt32(textYear.Text);
-            int myRating = Convert.ToInt32(textMyRating.Text);
+
+            int year;
+            int myRating;
+
+            if (string.IsNullOrWhiteSpace(textTitle.Text) || string.IsNullOrWhiteSpace(textArtist.Text) || string.IsNullOrWhiteSpace(textAlbum.Text) || string.IsNullOrWhiteSpace(textYear.Text) || string.IsNullOrWhiteSpace(textMyRating.Text))
+            {
+                MessageBox.Show("Please fill in all fields.");
+                return;
+            }
+
+            try
+            {
+                year = Convert.ToInt32(textYear.Text);
+                myRating = Convert.ToInt32(textMyRating.Text);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Year and Rating must be numbers.");
+                return;
+            }
 
             Music music = new Music(textTitle.Text, textArtist.Text, textAlbum.Text, year, myRating);
             all_Music.Add(music);
             this.Close();
+                
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
