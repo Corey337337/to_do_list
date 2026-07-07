@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="400">
     <Canvas>
-        <ListView x:Name="MusicListView" Height="292" Width="399" HorizontalAlignment="Center" VerticalAlignment="Center" >
+        <ListView x:Name="MusicListView" Height="292" Width="381" HorizontalAlignment="Left" VerticalAlignment="Center" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
