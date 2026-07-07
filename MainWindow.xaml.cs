@@ -9,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace music_list
 {
@@ -34,9 +35,13 @@ namespace music_list
     {
         public ObservableCollection<Music> allMusic;
 
+        private static readonly string filePath = "music_file.json";
+
         public MainWindow()
         {
             InitializeComponent();
+
+
 
             allMusic = new ObservableCollection<Music>
             {
@@ -48,7 +53,22 @@ namespace music_list
             MusicListView.ItemsSource = allMusic;
         }
 
-        
+
+        private void SaveList()
+        {
+            
+
+        }
+
+        private ObservableCollection<Music> LoadList()
+        {
+            if (!File.Exists(filePath))
+            {
+                return new ObservableCollection<Music>();
+            }
+            return allMusic;//временно чтобы не было ошибки
+        }
+
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
