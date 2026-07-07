@@ -19,14 +19,14 @@
         <TextBlock Text="Year:" Canvas.Left="29" Canvas.Top="160" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <TextBox x:Name="textYear" Width="150" Canvas.Left="121" Canvas.Top="160" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-        <TextBlock Text="My Rating:" Canvas.Left="29" Canvas.Top="201" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Text="Rating:" Canvas.Left="29" Canvas.Top="201" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <TextBox x:Name="textMyRating" Width="150" Canvas.Left="121" Canvas.Top="201" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
 
 
         <Button x:Name="Add_Music" Content="Add" Canvas.Left="71" Canvas.Top="248"  Width="150" Height="30"  HorizontalAlignment="Left" VerticalAlignment="Top" Click="Add_Music_Click"/>
 
-        <Button x:Name="Cancel" Content="Cancel" Canvas.Left="71" Canvas.Top="288"  Width="150" Height="30"  HorizontalAlignment="Left" VerticalAlignment="Top" Click="Cancel_Click"/>
+        <Button x:Name="CancelButton" Content="Cancel" Canvas.Left="71" Canvas.Top="288"  Width="150" Height="30"  HorizontalAlignment="Left" VerticalAlignment="Top" Click="Cancel_Click"/>
 
 
     </Canvas>
