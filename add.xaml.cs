@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace music_list
 {
@@ -21,6 +22,7 @@ namespace music_list
     public partial class add : Window
     {
         public ObservableCollection<Music> all_Music { get; set; }
+
 
         public add()
         {
